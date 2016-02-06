@@ -1,0 +1,23 @@
+# Setting: updatechecker.enable Default: true # Enable KCauldron update checker
+# Setting: updatechecker.autorestart Default: false # Restart server after updating without confirming (set restart script in spigot.yml)
+# Setting: common.allowNetherPortalBesidesOverworld Default: false # Allow nether portals in dimensions besides overworld
+# Setting: logging.materialInjection Default: false # Log material injection event
+# Setting: logging.clientModList Default: true # Print client's mod list during attempt to join
+# Setting: updatechecker.quiet Default: false # Print less info during update
+# Setting: command.enable Default: true # Enable KCauldron command
+# Setting: updatechecker.symlinks Default: KCauldron.jar # (Re)create symlinks after update
+# Setting: updatechecker.autoinstall Default: false # Install updates without confirming
+
+updatechecker:
+  enable: true
+  autorestart: false
+  quiet: false
+  symlinks: KCauldron.jar
+  autoinstall: false
+common:
+  allowNetherPortalBesidesOverworld: false
+logging:
+  materialInjection: false
+  clientModList: true
+command:
+  enable: true
