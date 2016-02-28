@@ -9,10 +9,13 @@
 # Setting: logging.entity-collision-checks Default: false   # Whether to log entity collision/count checks
 # Setting: settings.load-chunk-on-forge-tick Default: false   # Forces Chunk Loading during Forge Server Tick events
 # Setting: settings.check-entity-max-speeds Default: false   # Removes any entity that exceeds max speed.
+# Setting: settings.chunk-gc-grace-period Default: 0   # Grace period of no-ticks before unload
+# Setting: plugin-settings.allow-reload Default: false   # Allow plugins to be reloaded. WARNING - breaks with some mods. We *will not* support this!
 # Setting: logging.connection Default: false   # Log connections
 # Setting: logging.tick-intervals Default: false   # Log when skip interval handlers are ticked
 # Setting: world-settings.default.flowing-lava-decay Default: false   # Lava behaves like vanilla water when source block is removed
 # Setting: logging.user-login Default: false   # Set true to enable debuggin user's login process
+# Setting: protection.spawn-protect Default: true   # Whether to enable Thermos' all-seeing protection in the spawn world
 # Setting: world-settings.default.allow-tnt-punishment Default: true   # TNT ability to push other entities (including other TNTs)
 # Setting: logging.dump-threads-on-warn Default: false   # Dump the the server thread on deadlock warning (delps to debug the deadlock)
 # Setting: logging.entity-speed-removal Default: false   # Whether to log entity removals due to speed
@@ -23,6 +26,7 @@
 # Setting: logging.collision-warn-size Default: 200   # Number of colliding entities in one spot before logging a warning. Set to 0 to disable
 # Setting: logging.entity-count-warn-size Default: 0   # Number of entities in one dimension logging a warning. Set to 0 to disable
 # Setting: world-settings.max-players-visible Default: -1   # How many players will visible in the tab list
+# Setting: world-settings.use-real-names Default: false   # Instead of DIM##, use the world name prescribed by the mod! Be careful with this one, could create incompat with existing setups!
 # Setting: logging.entity-death Default: false   # Log when an entity is destroyed (dev)
 # Setting: logging.entity-despawn Default: false   # Log when living entities are despawned (dev)
 # Setting: logging.chunk-unload Default: false   # Log when chunks are unloaded (dev)
@@ -30,6 +34,8 @@
 # Setting: fake-players.do-login Default: false   # Raise login events for fake players
 # Setting: logging.entity-spawn Default: false   # Log when living entities are spawned (dev)
 # Setting: logging.dump-chunks-on-deadlock Default: false   # Dump chunks in the event of a deadlock (helps to debug the deadlock)
+# Setting: optimized.redstone-repeater-update-speed Default: -1   # how many milliseconds the server must ignore before trying repeater updates
+# Setting: optimized.redstone-redstoneTorch-update-speed Default: -1   # how many milliseconds the server must ignore before trying redstoneTorch updates
 # Setting: settings.load-chunk-on-request Default: true   # Forces Chunk Loading on 'Provide' requests (speedup for mods that don't check if a chunk is loaded
 # Setting: settings.entity-bounding-box-max-size Default: 1000   # Max size of an entity's bounding box before removing it (either being too large or bugged and 'moving' too fast)
 # Setting: settings.dump-materials Default: false   # Dumps all materials with their corresponding id's
@@ -59,22 +65,61 @@ logging:
   dump-heap-on-deadlock: false
 settings:
   load-chunk-on-forge-tick: false
-  check-entity-max-speeds: false
+  check-entity-max-speeds: true
+  chunk-gc-grace-period: 0
   check-entity-bounding-boxes: true
   load-chunk-on-request: true
   entity-bounding-box-max-size: 1000
   dump-materials: false
-world-settings:
-  default:
-    flowing-lava-decay: false
-    allow-tnt-punishment: true
-    infinite-water-source: true
-  max-players-visible: -1
 plugin-settings:
+  allow-reload: false
   default:
     remap-plugin-file: false
+    custom-class-loader: true
+    debug: false
+    remap-nms-v1_7_R4: true
+    remap-nms-v1_7_R3: true
+    remap-nms-v1_7_R1: true
+    remap-nms-v1_6_R3: true
+    remap-nms-v1_5_R3: true
+    remap-nms-pre: 'false'
+    remap-obc-v1_7_R4: true
+    remap-obc-v1_7_R3: true
+    remap-obc-v1_7_R1: true
+    remap-obc-v1_6_R3: true
+    remap-obc-v1_5_R3: true
+    remap-obc-pre: false
+    global-inheritance: true
+    plugin-inheritance: true
+    remap-reflect-field: true
+    remap-reflect-class: true
+    remap-allow-future: true
+world-settings:
+  default:
+    flowing-lava-decay: true
+    allow-tnt-punishment: true
+    infinite-water-source: true
+    entity-despawn-immediate: false
+  max-players-visible: -1
+  use-real-names: false
+protection:
+  spawn-protect: true
 fake-players:
   do-login: false
+optimized:
+  redstone-repeater-update-speed: -1
+  redstone-redstoneTorch-update-speed: -1
 debug:
   thread-contention-monitoring: false
 config-version: 1
+world-environment-settings:
+  normal:
+    keep-world-loaded: true
+  nether:
+    keep-world-loaded: true
+    enabled: true
+  the_end:
+    keep-world-loaded: true
+    enabled: true
+  end:
+    enabled: true
