@@ -1,0 +1,31 @@
+uuid: 9c80e6b6-967c-4343-b54c-88b68a011301
+timestamps:
+  login: 1498878736792
+  logout: 1498881115728
+  lastteleport: 1498876321835
+ipAddress: 81.99.39.116
+lastlocation:
+  world: DIM66
+  x: -97.5
+  y: 48.0
+  z: 146.5
+  yaw: -7.1998134
+  pitch: 4.6500072
+logoutlocation:
+  world: DIM66
+  x: -86.5
+  y: 48.0
+  z: 150.5
+  yaw: -247.0498
+  pitch: 14.399998
+nickname: Josh
+homes:
+  home:
+    world: DIM66
+    x: -96.31232492625713
+    y: 48.0
+    z: 151.63467328293376
+    yaw: 1.8000007
+    pitch: 5.399996
+godmode: false
+afk: false

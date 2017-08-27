@@ -1,0 +1,20 @@
+uuid: 92c681cc-851d-496d-b76e-8f9770d43d55
+timestamps:
+  login: 1498614305094
+  lastteleport: 1498615366851
+  logout: 1498616089060
+ipAddress: 73.172.234.194
+lastlocation:
+  world: CarmenSandiego
+  x: -453.0
+  y: 89.0
+  z: 172.0
+  yaw: 1.6500001
+  pitch: -4.2000003
+logoutlocation:
+  world: DIM66
+  x: -95.9835620417928
+  y: 48.0
+  z: 150.68045930463023
+  yaw: -165.44998
+  pitch: -54.299988
