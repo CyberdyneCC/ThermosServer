@@ -1,5 +1,8 @@
 echo "Using advanced Linux startup"
+# linux startup commands here
 echo "Executing start.bat"
+# pasted from start.bat
+# LOL
 echo "Checking environment..."
 java -version
 echo "starting Thermos..."
