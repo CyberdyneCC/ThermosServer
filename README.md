@@ -1,2 +1,2 @@
 # ThermosServer
-The server setup for Thermos! Just drag and drop the jar you want to use from https://github.com/CyberdyneCC/Thermos/releases !
+The server files for Thermos! Just download, unzip and run the batchfile or shell script!
