@@ -2,9 +2,9 @@
 
 The server files for Thermos! 
 
-# Download options
+# Build
 
-MultipleOS's - Just download, unzip and run the batchfile or shell script!
+Just download, unzip and run the batchfile or shell script!
 
 Linux - run the following commands
 
