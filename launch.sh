@@ -1,9 +1,6 @@
 echo "Using advanced Linux startup"
 # linux startup commands here
 sudo apt -y install git default-jre default-jdk
-echo "Executing start.bat"
-# pasted from start.bat
-# LOL
 echo "Checking environment..."
 java -version
 # Environment check /\
