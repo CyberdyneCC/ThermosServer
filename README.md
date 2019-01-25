@@ -1,12 +1,16 @@
 # ThermosServer
 
-The server files for Thermos! 
+The server files for Thermos!
 
-# Build
+# Use
 
-Just download, unzip and run the batchfile or shell script!
+Download the latest [Release]() src code
 
-Linux - run the following commands
+Unzip the src code
+
+Run the start script
+
+### Linux - run the following commands
 
 ```sh
 sudo apt install git default-jre default-jdk
